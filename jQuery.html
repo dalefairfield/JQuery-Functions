@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="utf-8">
+      <title>jQuery Functions</title>
+        <link rel="stylesheet" type="text/css" href="jquerystyle.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $("#hidebutton").click(function(){
+            $("#Dale").hide()
+          });
+          $("#showbutton").click(function(){
+            $("#Dale").show()
+          });
+          $("#redbutton").click(function(){
+            $("#redtext").addClass("red")
+          });
+          $("#redtext").text("this with new text");
+          $("#redtext").before("I am inserting with a before function....");
+          $("#redtext").after("....and ending with this text with an after function!");
+          $( "#html" ).html();
+          $("#html").append(" I've been appended");
+          $( "#Toggle" ).click(function() {
+              $( "#toggletext" ).toggle( );
+            });
+          $("select").val();
+          $( "#SLIDEToggle" ).click(function() {
+            $( "#name" ).slideToggle( "slow" );
+          });
+          $( "input" ).focus(function() {
+            $( this ).next( "#focus" ).fadeOut( 1000 ).fadeIn(1000);
+          });
+          $( "#DOWN" ).click(function() {
+            $( "#slideup" ).slideDown("slow",function(){
+            });
+          });
+          $( "#UP" ).click(function() {
+            $( "#slideup" ).slideUp("slow",function(){
+            });
+          });
+          var title=$("#colorfulimg").attr("alt")
+          $("#colorfulimg").text("title");
+        });
+        $( "select" ).click(function() {
+          alert( $( "select" ).data( "option selected" ) );
+        });
+
+        </script>
+        <style>
+          .red{
+            color:red;
+          }
+        </style>
+      </head>
+          <div id="wrapper">
+              <h1>hide</h1>
+              <button id="hidebutton">Want to see me disappear?</button>
+              <img id="Dale" src=C:/Users/dale/Pictures/HeadShotApplication.png alt="Dale Fairfield">
+              <h1>show</h1>
+              <button id="showbutton">Want to see me reappear?</button>
+              <h1>AddClass</h1>
+              <button id="redbutton">Watch the text turn red?</button>
+              <p id="redtext">Here is the text that should turn red</p>
+              <p id="html">html tag</p>
+              <button id="Toggle">Toggle Text</button>
+              <p id="toggletext"> Toggled Text Today!</p>
+              <select>
+                <option>option 1</option>
+                <option>option 2</option>
+              </select>
+              <br>
+              <input type="type" value=""><span id="focus">Focus</span>
+              <br>
+              <button id="SLIDEToggle">Slide Toggle</button>
+              <p id="name">My name is Dale Fairfield</p>
+              <button id="DOWN">Scroll Down</button>
+              <button id="UP">Scroll Up</button>
+              <p id="slideup">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla ornare sapien ut justo sagittis, eget laoreet eros consectetur. Aenean elementum ac sapien id semper.</p>
+
+
+              <img id="colorfulimg" src="peacock.png" alt="colorful img">
+
+
+          </div>
+   </body>
+</html>
